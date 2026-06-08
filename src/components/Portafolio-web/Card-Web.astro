@@ -1,0 +1,108 @@
+---
+const { title, category, link } = Astro.props;
+---
+
+<div class="card-web">
+  <img src={`https://s.wordpress.com/mshots/v1/${link}/?w=1200`} alt={title} />
+
+  <div class="content">
+    <div class="">
+      <span>{category}</span>
+      <h2>{title}</h2>
+    </div>
+    <a href={link} class="visit-btn" target="_blank">
+      Visitar <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+        ><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path
+          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+        ></path></svg
+      >
+    </a>
+  </div>
+</div>
+
+<style>
+  .card-web {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: 0 4px 50px 10px #0b265421;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 25px;
+  }
+
+  .card-web:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    box-shadow: 2px 5px 15px 10px #1e3b8a50;
+  }
+
+  .card-web span {
+    color: #0c3376cf;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 25px;
+    font-size: clamp(12px, 2vw, 14px);
+  }
+  h2 {
+    font-size: clamp(20px, 4vw, 24px);
+    margin: 10px 0px;
+    color: var(--color-primary);
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 20px;
+  }
+
+  img {
+    width: 100%;
+    height: 17rem;
+    object-fit: cover;
+    object-position: top;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+
+  .visit-btn {
+    text-decoration: none;
+    padding: 0.5rem 1.4rem;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #1e3a8a;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: clamp(14px, 2vw, 16px);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+
+
+  .visit-btn:hover {
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    img {
+      height: 14rem;
+    }
+
+    .card-web {
+      margin: 1rem 0rem;
+    }
+  }
+</style>

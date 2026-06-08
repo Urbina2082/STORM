@@ -1,0 +1,63 @@
+---
+import CardWeb from "../components/Portafolio-web/Card-Web.astro";
+import InitSection from "../components/Init-Section.astro";
+
+const Pages = [
+  {
+    title: "Techno Electric",
+    category: "INDUSTRIAL",
+
+    link: "https://technoelectric.netlify.app/",
+  },
+  {
+    title: "MR Boneless",
+    category: "Restaurante",
+
+    link: "https://mrbonneles.netlify.app/",
+  },
+  {
+    title: "Reyes del Ring",
+    category: "Entretenimiento",
+
+    link: "https://reyesdelring.netlify.app/",
+  },
+  {
+    title: "Mapple Waffles",
+    category: "Gastronomia",
+
+    link: "https://maplewaffles.netlify.app/",
+  },
+];
+---
+
+<div class="Portafolio">
+  <InitSection />
+
+  <div class="Cards">
+    {
+      Pages.map((link) => (
+        <CardWeb title={link.title} category={link.category} link={link.link} />
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .Cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1rem;
+    max-width: 1200px;
+    padding: 0px 15px;
+    justify-content: center;
+  }
+
+ @media (max-width: 400px) {
+ .Cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));}
+
+
+ }
+ 
+</style>

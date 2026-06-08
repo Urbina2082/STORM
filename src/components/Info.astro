@@ -1,0 +1,75 @@
+<div class="info">
+  <div class="tacks">
+    <h3>+10</h3>
+    <p>Proyectos realizados</p>
+  </div>
+  <div class="tacks">
+    <h3>+15</h3>
+    <p>Clientes satisfechos</p>
+  </div>
+
+  <div class="tacks">
+    <h3>24/7</h3>
+    <p>Soporte especializado</p>
+  </div>
+</div>
+
+<style>
+  .info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 30px auto;
+    box-shadow: 0 4px 50px 10px #0b265421;
+    border-radius: 25px;
+    max-width: 700px;
+    margin: 4rem auto;
+  }
+
+  .tacks {
+    max-width: 300px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .tacks h3 {
+    color: var(--color-primary);
+    font-size: 29px;
+    font-weight: 500;
+    margin: 7px;
+  }
+
+  .tacks p {
+    color: var(--color-secondary-transparent);
+    font-size: 15px;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .info {
+      display: flex;
+      gap: 5px;
+      box-shadow: 0 4px 50px 10px #0b265400;
+      padding: 10px 5px;
+      max-width: 700px;
+    }
+
+    .tacks {
+      margin-bottom: 20px;
+      box-shadow: 0 4px 50px 10px #0b265421;
+      border-radius: 25px;
+      padding: 10px 20px;
+    }
+    .tacks h3 {
+      font-size: 22px;
+    }
+
+    .tacks p {
+      font-size: 12px;
+    }
+  }
+</style>

@@ -1,0 +1,10 @@
+:root {
+    --color-white: #ffffff;
+  --color-primary: #0b2654;
+  --color-secondary-transparent: hsla(0, 0%, 0%, 0.692);
+  --gradient-brand: linear-gradient(135deg, #0d2b5e 0%, #1d4d8f 100%);
+}
+
+button{
+    cursor: pointer;
+}
