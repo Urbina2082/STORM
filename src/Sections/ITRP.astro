@@ -1,0 +1,45 @@
+---
+import Init from "../components/Init.astro";
+import CardItrp from "../components/Itrp/Card-Itrp.astro";
+---
+
+<div class="itrp">
+  <Init title="No vendemos tecnología.
+Creamos resultados." />
+  <div class="cards-itrp">
+    <CardItrp
+      image="/Icons/billetera.webp"
+      subtitle="Mas Ingresos"
+      description="Convierte la tecnología en una herramienta que impulse ventas y crecimiento."
+    />
+    <CardItrp
+      image="/Icons/reloj-de-pared.webp"
+      subtitle="Más tiempo"
+      description="Reduce problemas operativos y enfócate en tu negocio."
+    />
+    <CardItrp
+      image="/Icons/verificado.webp"
+      subtitle="Menos riesgos"
+      description="Protege información, equipos e infraestructura."
+    />
+    <CardItrp
+      image="/Icons/mision.webp"
+      subtitle="Más profesionalismo"
+      description="Proyecta confianza frente a clientes y socios."
+    />
+  </div>
+</div>
+
+<style>
+
+  .itrp{
+    margin: 7rem 0rem ;
+  }
+
+  .cards-itrp {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+</style>

@@ -1,0 +1,62 @@
+---
+import InitSection from "../components/Init-Section.astro";
+import Servicio from "../components/Servicios/Servicios-Card.astro";
+---
+
+<div class="Servicios">
+  <InitSection
+    Section="SERVICIOS"
+    ,
+    title="Soluciones que resuelven problemas reales"
+  />
+  <div class="serv">
+    <Servicio
+      image="/Icons/red-mundial.webp"
+      num="01"
+      title="Páginas Web"
+      sec1="Tu empresa no aparece profesional ni genera confianza."
+      sec2="Diseño premium, copy estratégico y optimización SEO."
+      sec3="Una presencia digital diseñada para atraer clientes y aumentar conversiones."
+    />
+    <Servicio
+      image="/Icons/tecnologia.webp"
+      num="02"
+      title="MSP"
+      sec1="Fallas constantes, pérdida de tiempo y falta de control tecnológico."
+      sec2="Administración proactiva 24/7 con plan Starter desde el día uno."
+      sec3="Infraestructura administrada que trabaja para tu negocio sin interrupciones."
+    />
+    <Servicio
+      image="/Icons/camara.webp"
+      num="03"
+      title="CCTV"
+      sec1="Falta de seguridad y poca visibilidad de lo que ocurre."
+      sec2="Cámaras IP, NVR y monitoreo remoto profesional."
+      sec3="Mayor control, protección y tranquilidad."
+    />
+    <Servicio
+      image="/Icons/redes-de-computadoras.webp"
+      num="04"
+      title="Redes"
+      sec1="Internet inestable y mala comunicación entre equipos."
+      sec2="Cableado estructurado, Wi-Fi empresarial."
+      sec3="Conectividad eficiente para mantener la productividad."
+    />
+    <Servicio
+      image="/Icons/llave-inglesa.webp"
+      num="05"
+      title="Soporte"
+      sec1="Equipos lentos y problemas que detienen operaciones."
+      sec2="Mantenimiento preventivo y correctivo programado."
+      sec3="Mayor productividad y continuidad operativa."
+    />
+  </div>
+</div>
+
+
+<style>
+    .Servicios{ 
+          margin: 10rem 0rem ;
+    }
+</style>
+

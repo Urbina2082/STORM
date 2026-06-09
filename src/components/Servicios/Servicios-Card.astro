@@ -1,0 +1,166 @@
+---
+const { image, num, title, sec1, sec2, sec3 } = Astro.props;
+---
+
+<div class="card-servicio">
+  <div class="track">
+    <div class="im">
+      <img src={image} alt="" />
+    </div>
+
+    <div class="cons">
+      <small>{num}</small>
+      <h3>{title}</h3>
+    </div>
+  </div>
+  <div class="track">
+    <div class="blocks prim">
+      <span class="acent">PROBLEMA</span>
+      <p>{sec1}</p>
+    </div>
+    <div class="blocks sec">
+      <span class="acent">SOLUCION</span>
+      <p>{sec2}</p>
+    </div>
+    <div class="blocks err">
+      <span>RESULTADO</span>
+      <p>{sec3}</p>
+    </div>
+  </div>
+  <div class="track">
+    <button
+      >Ver Solucion <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-arrow-right h-4 w-4"
+        aria-hidden="true"
+        ><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg
+      >
+    </button>
+  </div>
+
+  <style>
+    .card-servicio {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 2rem;
+      border: 1px solid #00000031;
+      box-shadow: 2px 2px 12px 12px #010f450a;
+      border-radius: 25px;
+      margin: 30px 10px;
+      padding: 2rem 3rem;
+    }
+
+    .card-servicio:hover {
+      box-shadow: 2px 2px 12px 12px #010f4517;
+      transform: translateY(-3px);
+      transition: all 0.3s ease;
+    }
+
+    .im {
+      width: 32px;
+      padding: 5px 10px;
+      border-radius: 15px;
+      background-image: var(--gradient-brand);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      filter: invert(1);
+
+      width: 100%;
+    }
+
+    h3 {
+      color: var(--color-primary);
+      font-size: 28px;
+      margin: 4px 0px;
+      font-weight: 500;
+    }
+    small {
+      color: var(--color-primary);
+    }
+    .track {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .blocks {
+      width: 9rem;
+      background: #f0f6fc;
+
+      padding: 15px;
+      border-radius: 25px;
+      line-height: 19px;
+    }
+    .sec {
+      background: #21539c14;
+      border: 1px solid #0000002c;
+    }
+
+    .blocks .acent {
+      color: var(--color-accent);
+      font-size: 12px;
+      font-weight: 400;
+    }
+    .prim,
+    .sec {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--color-text);
+    }
+
+    button {
+      background: #f0f6fc;
+      border-radius: 25px;
+      padding: 10px 25px;
+      font-size: 0.9rem;
+      border: 1px solid #0000002e;
+      color: var(--color-primary);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .track .err {
+      background: var(--gradient-brand);
+      color: #ffffff;
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+
+    .err span {
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    @media (max-width: 768px) {
+      .card-servicio {
+        gap: 1.5rem;
+        padding: 2rem 2rem;
+        justify-content: left;
+        margin: 30px 30px;
+      }
+      .track {
+        gap: 0.8rem;
+        justify-content: left;
+      }
+      .blocks {
+        width: auto;
+      }
+    }
+  </style>
+</div>

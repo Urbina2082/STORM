@@ -31,7 +31,11 @@ const Pages = [
 ---
 
 <div class="Portafolio">
-  <InitSection />
+  <InitSection
+  Section="PORTAFOLIO",
+  title="Resultados que hablan por sí solos"
+  
+  />
 
   <div class="Cards">
     {
@@ -50,8 +54,12 @@ const Pages = [
     max-width: 1200px;
     padding: 0px 15px;
     justify-content: center;
+     
   }
 
+  .Portafolio{
+ margin: 10rem 0rem ;
+  }
  @media (max-width: 400px) {
  .Cards {
     display: grid;

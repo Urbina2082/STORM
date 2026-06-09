@@ -1,9 +1,8 @@
 ---
-const {Section,title} =Astro.props;
+const {title} =Astro.props;
 ---
 
 <div class="Init-Section">
-  <span> {Section}</span>
   <h2>{title}</h2>
 </div>
 
@@ -13,21 +12,12 @@ const {Section,title} =Astro.props;
     margin: 50px auto;
   }
 
-  .Init-Section span {
-    color: #0c3376cf;
-    font-size: 14px;
-    font-weight: 500;
-   background: #73a6ff2b;
-    padding: 5px 25px;
-    border-radius: 25px;
-  }
-
   .Init-Section h2 {
     background: var(--gradient-brand);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: clamp(29px, 5vw, 40px);
+    font-size: clamp(29px, 5vw, 50px);
     font-weight: 500;
-    margin: 20px;
+    margin-top: 20px;
   }
 </style>
