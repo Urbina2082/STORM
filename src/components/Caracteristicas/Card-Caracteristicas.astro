@@ -1,0 +1,37 @@
+---
+const { image, title, description } = Astro.props;
+---
+
+<div class="card-caracteristicas">
+  <img src={image} alt="" />
+  <h3>{title}</h3>
+  <p>{description}</p>
+</div>
+
+<style>
+  .card-caracteristicas {
+    padding: 15px;
+    border-radius: 25px;
+    border: 1px solid #00000027;
+    box-shadow: 2px 2px 15px 15px #00000009;
+    display: inline-block;
+  }
+
+  img {
+    width: 24px;
+    margin: 1rem 0rem 0rem;
+ font-weight: 900;
+    filter: brightness(0) saturate(100%) invert(28%) sepia(64%) saturate(1232%)
+      hue-rotate(193deg) brightness(92%) contrast(92%);
+  }
+  h3 {
+    color: var(--color-primary);
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  p {
+    color: var(--color-text);
+    font-weight: 400;
+  }
+</style>

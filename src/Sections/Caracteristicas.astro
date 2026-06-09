@@ -1,0 +1,66 @@
+---
+import CardCaracteristicas from "../components/Caracteristicas/Card-Caracteristicas.astro";
+import Init from "../components/Init.astro";
+
+const caract = [
+  {
+    image: "/Icons/destello.webp",
+    title: "Respuesta rápida",
+    description: "Tiempos de respuesta acordados por SLA.",
+  },
+  {
+    image: "/Icons/dos.webp",
+    title: "Soluciones escalables",
+    description: "Crecen al ritmo de tu negocio.",
+  },
+  {
+    image: "/Icons/personas.webp",
+    title: "Atención personalizada.",
+    description: "Un equipo dedicado a tu cuenta.",
+  },
+  {
+    image: "/Icons/brillar.webp",
+    title: "Experiencia multidisciplinaria",
+    description: "Web, redes, seguridad y soporte bajo un mismo techo.",
+  },
+  {
+    image: "/Icons/audifonos.webp",
+    title: "Acompañamiento continuo",
+    description: "Estamos contigo antes, durante y después.",
+  },
+  {
+    image: "/Icons/candado.webp",
+    title: "Seguridad y confianza.",
+    description: "Buenas prácticas, documentación y respaldo.",
+  },
+];
+---
+
+<div class="caracteristicas">
+  <Init title="Tecnología con enfoque empresarial" />
+
+  <div class="envolt">
+    {
+      caract.map((porp) => (
+        <CardCaracteristicas
+          image={porp.image}
+          title={porp.title}
+          description={porp.description}
+        />
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .caracteristicas {
+    margin: 4rem 0rem;
+  }
+
+  .envolt {
+    margin: 0rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+</style>

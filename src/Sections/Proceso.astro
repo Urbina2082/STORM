@@ -1,0 +1,42 @@
+---
+import Init from "../components/Init.astro";
+
+import Procesos from "../components/Proceso/Proceso.astro";
+---
+
+<div class="proceso">
+  <Init title="Un proceso claro para obtener resultados" />
+
+  <div class="proc">
+    <Procesos
+      num="01"
+      title="Diagnostico"
+      description="Analizamos tu infraestructura y objetivos."
+    />
+    <Procesos
+      num="02"
+      title="Planeación"
+      description="Diseñamos una hoja de ruta clara y medible."
+    />
+    <Procesos
+      num="03"
+      title="Implementación"
+      description="Ejecutamos con precisión y mínima fricción."
+    />
+    <Procesos
+      num="04"
+      title="Soporte y Optimización"
+      description="Acompañamos resultados y mejoramos continuamente."
+    />
+  </div>
+</div>
+
+<style>
+  .proc {
+    margin: 4rem 1rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>

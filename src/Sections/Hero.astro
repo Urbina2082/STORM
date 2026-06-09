@@ -85,7 +85,17 @@ import Menu from "../components/Menu.astro";
     margin: 0 10px;
   }
 
-  @media (max-width: 768px) {
+ @media (max-width: 768px) {
+    .hero-content {
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.916), rgba(255, 255, 255, 0.979)),
+        url("Fondo.avif");
+      background-size: 180%;
+      background-position: center 30px;
+    }
+  }
+
+  @media (max-width: 568px) {
     .hero-content {
       background-image:
         linear-gradient(rgba(255, 255, 255, 0.916), rgba(255, 255, 255, 0.979)),
