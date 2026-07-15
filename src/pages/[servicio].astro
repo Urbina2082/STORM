@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Menu from "../components/Menu.astro";
+
+
+export async function getStaticPaths() {
+  return [
+    { params: { servicio: "camaras" } },
+    { params: { servicio: "internet" } },
+    { params: { servicio: "impresoras" } },
+  ];
+}
+
+const { servicio } = Astro.params;
+---
+
+<Layout>
+    <Menu />
+</Layout>
