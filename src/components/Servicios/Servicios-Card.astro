@@ -28,23 +28,31 @@ const { image, num, title, sec1, sec2, sec3 } = Astro.props;
     </div>
   </div>
   <div class="track">
-    <a href="/camaras">
-    <button
-      >Solicitar <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="22"
-        height="22"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="lucide lucide-arrow-right h-4 w-4"
-        aria-hidden="true"
-        ><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg
+    <a
+      class="btn"
+      href="https://wa.me/5218611268148?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20un%20diagn%C3%B3stico%20para%20mi%20proyecto.%20%C2%BFPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n?"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <button>
+        Solicitar
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M5 12h14"></path>
+          <path d="m12 5 7 7-7 7"></path>
+        </svg></button
       >
-    </button></a>
+    </a>
   </div>
 
   <style>
@@ -133,6 +141,7 @@ const { image, num, title, sec1, sec2, sec3 } = Astro.props;
       font-weight: 500;
       display: flex;
       align-items: center;
+      
       gap: 0.3rem;
     }
 
@@ -143,6 +152,9 @@ const { image, num, title, sec1, sec2, sec3 } = Astro.props;
       font-weight: 400;
     }
 
+    a{
+      text-decoration: none;
+    }
     .err span {
       font-size: 12px;
       font-weight: 400;
@@ -165,5 +177,3 @@ const { image, num, title, sec1, sec2, sec3 } = Astro.props;
     }
   </style>
 </div>
- <!-- onclick="window.open('https://wa.me/5218611268148?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20un%20diagn%C3%B3stico%20para%20mi%20proyecto.%20%C2%BFPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n?','_blank')" -->
-     
