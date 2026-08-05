@@ -3,11 +3,17 @@ import CardWeb from "../components/Portafolio-web/Card-Web.astro";
 import InitSection from "../components/Init-Section.astro";
 
 const Pages = [
-   {
+  {
     title: "Reina Sabinas 2026",
     category: "BELLEZA",
 
     link: "https://reinasabinas.netlify.app/",
+  },
+  {
+    title: "Feriexpo Sabinas 2026",
+    category: "FERIA",
+
+    link: "https://feriexpo2026.netlify.app/",
   },
   {
     title: "Techno Electric",
@@ -21,31 +27,33 @@ const Pages = [
 
     link: "https://mrbonneles.netlify.app/",
   },
-  {
-    title: "Reyes del Ring",
-    category: "ENTRETENIMIENTO",
 
-    link: "https://reyesdelring.netlify.app/",
+  {
+    title: "Hoco Strawberries",
+    category: "GASTRONOMIA",
+
+    link: "https://hoco-strawberries.netlify.app/",
   },
   {
     title: "Mapple Waffles",
     category: "GASTRONOMIA",
 
     link: "https://maplewaffles.netlify.app/",
-  }, {
-    title: "Hoco Strawberries",
-    category: "GASTRONOMIA",
+  },
+  {
+    title: "Reyes del Ring",
+    category: "ENTRETENIMIENTO",
 
-    link: "https://hoco-strawberries.netlify.app/",
+    link: "https://reyesdelring.netlify.app/",
   },
 ];
 ---
 
 <div class="Portafolio">
   <InitSection
-  Section="PORTAFOLIO",
-  title="Resultados que hablan por sí solos"
-  
+    Section="PORTAFOLIO"
+    ,
+    title="Resultados que hablan por sí solos"
   />
 
   <div class="Cards">
@@ -65,18 +73,15 @@ const Pages = [
     max-width: 1200px;
     padding: 0px 15px;
     justify-content: center;
-     
   }
 
-  .Portafolio{
- margin: 10rem 0rem ;
+  .Portafolio {
+    margin: 10rem 0rem;
   }
- @media (max-width: 400px) {
- .Cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));}
-
-
- }
- 
+  @media (max-width: 400px) {
+    .Cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+  }
 </style>
